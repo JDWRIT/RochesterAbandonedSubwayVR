@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cerrv3c214hmc"]
+
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_5yig4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5yig4"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ff227"]
+sky_material = SubResource("ProceduralSkyMaterial_5yig4")
+
+[sub_resource type="Environment" id="Environment_mslae"]
+background_mode = 2
+sky = SubResource("Sky_ff227")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff227"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5yig4"]
+material = SubResource("StandardMaterial3D_ff227")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mslae"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6t8sk"]
+material = SubResource("StandardMaterial3D_mslae")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5yig4"]
+albedo_color = Color(0.15398586, 0.28264305, 0.12126266, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ff227"]
+material = SubResource("StandardMaterial3D_5yig4")
+
+[node name="BaseScene" type="Node3D" unique_id=2043748124]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=770016708]
+environment = SubResource("Environment_mslae")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=613043891]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StartXR" parent="." unique_id=2122271507 instance=ExtResource("1_5yig4")]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=256222629]
+current = true
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1228153014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+current = true
+
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D" unique_id=1898099663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -1)
+tracker = &"left_hand"
+
+[node name="HandModel" type="MeshInstance3D" parent="XROrigin3D/LeftHand" unique_id=376266524]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_5yig4")
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D" unique_id=1358639634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -1)
+tracker = &"right_hand"
+
+[node name="HandModel" type="MeshInstance3D" parent="XROrigin3D/RightHand" unique_id=1920797237]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_6t8sk")
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1607842203]
+transform = Transform3D(4.1000004, 0, 0, 0, 1, 0, 0, 0, 4.2, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ff227")
