@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dhm0ta5r0itpi"]
+
+[ext_resource type="PackedScene" uid="uid://bx1ugtjchse2c" path="res://drive_aquaduct_models/ROC_Aqueduct_Project Site.gltf" id="1_b7hmd"]
+
+[node name="ROC_Aqueduct_Project Site" unique_id=972303947 instance=ExtResource("1_b7hmd")]

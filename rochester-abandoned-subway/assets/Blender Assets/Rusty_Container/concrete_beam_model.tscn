@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ky42cu1awink"]
+
+[ext_resource type="PackedScene" uid="uid://dhernjo1ixw31" path="res://assets/Blender Assets/Concrete_beam/Concrete_Beam_Model.FBX" id="1_2ucsh"]
+[ext_resource type="Texture2D" uid="uid://pf5g6q5j53pl" path="res://assets/Blender Assets/Concrete_beam/MI_Concrete_Ceiling_Beam_ujoqec3ga_2K_BaseColor.png" id="2_nfbea"]
+[ext_resource type="Texture2D" uid="uid://bq12d85gaemvd" path="res://assets/Blender Assets/Concrete_beam/MI_Concrete_Ceiling_Beam_ujoqec3ga_2K_MetallicRoughness.png" id="3_eeboe"]
+[ext_resource type="Texture2D" uid="uid://bayqjsksjikyt" path="res://assets/Blender Assets/Concrete_beam/MI_Concrete_Ceiling_Beam_ujoqec3ga_2K_Normal.png" id="4_gpvir"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p51xe"]
+albedo_texture = ExtResource("2_nfbea")
+metallic = 1.0
+metallic_texture = ExtResource("3_eeboe")
+roughness_texture = ExtResource("4_gpvir")
+
+[node name="Concrete_Beam_Model" unique_id=1288718128 instance=ExtResource("1_2ucsh")]
+
+[node name="S_Concrete_Ceiling_Beam_ujoqec3ga_lod3_Var1_LOD0" parent="S_Concrete_Ceiling_Beam_ujoqec3ga_lod3_Var1" parent_id_path=PackedInt32Array(759634539) index="0" unique_id=512709766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2119455, 0)
+
+[node name="S_Concrete_Ceiling_Beam_ujoqec3ga_lod3_Var1_LOD1" parent="S_Concrete_Ceiling_Beam_ujoqec3ga_lod3_Var1" parent_id_path=PackedInt32Array(759634539) index="1" unique_id=548170669]
+surface_material_override/0 = SubResource("StandardMaterial3D_p51xe")
+
+[node name="S_Concrete_Ceiling_Beam_ujoqec3ga_lod3_Var1_LOD2" parent="S_Concrete_Ceiling_Beam_ujoqec3ga_lod3_Var1" parent_id_path=PackedInt32Array(759634539) index="2" unique_id=1817737828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3652437, 0)
+
+[node name="S_Concrete_Ceiling_Beam_ujoqec3ga_lod3_Var1_LOD3" parent="S_Concrete_Ceiling_Beam_ujoqec3ga_lod3_Var1" parent_id_path=PackedInt32Array(759634539) index="3" unique_id=740597039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9075308, 0)

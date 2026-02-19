@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b82cd38fjkg35"]
+
+[ext_resource type="Texture2D" uid="uid://cc16hryqjupqa" path="res://assets/Blender Assets/Modular_Train_track/MI_Modular_Train_Track_ufekaevdw_2K_BaseColor.png" id="1_kgnmg"]
+[ext_resource type="Texture2D" uid="uid://s2ctljliyuwa" path="res://assets/Blender Assets/Modular_Train_track/MI_Modular_Train_Track_ufekaevdw_2K_MetallicRoughness.png" id="2_pc157"]
+[ext_resource type="Texture2D" uid="uid://hag4l1y3g2tg" path="res://assets/Blender Assets/Modular_Train_track/MI_Modular_Train_Track_ufekaevdw_2K_Normal.png" id="3_vx31a"]
+
+[resource]
+albedo_texture = ExtResource("1_kgnmg")
+metallic = 1.0
+metallic_texture = ExtResource("2_pc157")
+roughness_texture = ExtResource("3_vx31a")

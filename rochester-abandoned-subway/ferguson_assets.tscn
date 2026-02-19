@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cg0gni2eo74s6"]
+
+[ext_resource type="PackedScene" uid="uid://dwlgkmyq0u1wk" path="res://assets/Blender Assets/Modular_Train_track/Modular_train_track.FBX" id="1_4emsq"]
+[ext_resource type="PackedScene" uid="uid://ds7gg2xmhc0db" path="res://assets/Blender Assets/Modular_Curb/Modular_Curb_model.FBX" id="2_mpfou"]
+[ext_resource type="PackedScene" uid="uid://b38bcsfwthy1o" path="res://assets/Blender Assets/Rusty_Container/Rusty_Container.FBX" id="3_hjhmj"]
+[ext_resource type="PackedScene" uid="uid://culvpf8ondxra" path="res://assets/Blender Assets/Modular_building_Roof/Modular_Building_roof_main_section.FBX" id="4_orb3r"]
+[ext_resource type="PackedScene" uid="uid://dnl8bb75m7xir" path="res://assets/Blender Assets/Modular_building_Roof/Modular_building_roof_second_section.FBX" id="5_0gf71"]
+[ext_resource type="PackedScene" uid="uid://cjw6hm2i4lbpm" path="res://assets/Blender Assets/Concrete_Pillar/Game/Megascans/3D_Assets/Concrete_Pillar_ujkgddqva/S_Concrete_Pillar_ujkgddqva_lod3_Var1.FBX" id="6_n7r30"]
+[ext_resource type="PackedScene" uid="uid://dhernjo1ixw31" path="res://assets/Blender Assets/Concrete_beam/Concrete_Beam_Model.FBX" id="7_ghqrt"]
+[ext_resource type="Material" uid="uid://cagbgns5r7myv" path="res://assets/textures/cs3.tres" id="8_b11tx"]
+[ext_resource type="Material" uid="uid://02h2xytuk44m" path="res://assets/textures/baseball.tres" id="10_k1klj"]
+[ext_resource type="Material" uid="uid://crmf2cayki2x1" path="res://assets/textures/cs1.tres" id="11_hjhmj"]
+[ext_resource type="Material" uid="uid://dfwr70jkd7etx" path="res://assets/textures/cs4.tres" id="12_0gf71"]
+[ext_resource type="Material" uid="uid://bbttox001ujpc" path="res://assets/textures/cs2.tres" id="12_orb3r"]
+[ext_resource type="Material" uid="uid://cdxxot1xtdurf" path="res://assets/textures/cs5.tres" id="13_n7r30"]
+[ext_resource type="Material" uid="uid://bierjacquuojj" path="res://assets/textures/cs6.tres" id="14_0gf71"]
+[ext_resource type="PackedScene" uid="uid://by4q35pgipdyj" path="res://assets/Blender Assets/Grafitii & PIctures/cs1_Mat.gltf" id="15_n7r30"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0gf71"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n7r30"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dycwk"]
+material = ExtResource("8_b11tx")
+
+[sub_resource type="BoxMesh" id="BoxMesh_3gdu7"]
+material = ExtResource("10_k1klj")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ghqrt"]
+material = ExtResource("12_0gf71")
+
+[sub_resource type="BoxMesh" id="BoxMesh_b11tx"]
+material = ExtResource("13_n7r30")
+
+[sub_resource type="BoxMesh" id="BoxMesh_sr5n7"]
+
+[node name="ferguson_assets" type="Node3D" unique_id=1251289437]
+
+[node name="dot f b x" type="Node3D" parent="." unique_id=1668491803]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -113.888466, 0, 83.84503)
+
+[node name="Modular_train_track" parent="dot f b x" unique_id=1714121643 instance=ExtResource("1_4emsq")]
+transform = Transform3D(-1.09278474e-07, 0, -1.58, 4.371138e-07, 2.5, 0, 2.5, -4.371138e-07, -6.9063994e-08, 3.240499, 5.0954204, 3.5775986)
+
+[node name="Modular_Curb_model" parent="dot f b x" unique_id=1812722042 instance=ExtResource("2_mpfou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.694423, 0, 14.907272)
+
+[node name="Rusty_Container" parent="dot f b x" unique_id=1545680295 instance=ExtResource("3_hjhmj")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 5.694423, 0, 7.3042674)
+
+[node name="roof" type="Node3D" parent="dot f b x" unique_id=254301635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.455265, 0, -5.766495)
+
+[node name="Modular_Building_roof_main_section" parent="dot f b x/roof" unique_id=214775508 instance=ExtResource("4_orb3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9656639, 0, 17.612867)
+
+[node name="Modular_building_roof_second_section" parent="dot f b x/roof" unique_id=861491154 instance=ExtResource("5_0gf71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.521646)
+
+[node name="S_Concrete_Pillar_ujkgddqva_lod3_Var1" parent="dot f b x" unique_id=1348615297 instance=ExtResource("6_n7r30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.694423, 0, 0.5057349)
+
+[node name="Concrete_Beam_Model" parent="dot f b x" unique_id=1288718128 instance=ExtResource("7_ghqrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6654088, 0, 5.7357755)
+
+[node name="graff_pic" type="Node3D" parent="." unique_id=1881160544]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -113.888466, 0, 34.026108)
+
+[node name="cs1" type="MeshInstance3D" parent="graff_pic" unique_id=1316539056]
+transform = Transform3D(0.5, 0, -1.1466801e-16, 0, 0.5, 0, 1.4333501e-15, 0, 0.04, 5.7491646, 0.57961905, -3.0224347)
+mesh = SubResource("BoxMesh_0gf71")
+surface_material_override/0 = ExtResource("11_hjhmj")
+
+[node name="cs2" type="MeshInstance3D" parent="graff_pic" unique_id=1805215669]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.04, 5.064978, 0.4763816, -3.1751814)
+mesh = SubResource("BoxMesh_n7r30")
+surface_material_override/0 = ExtResource("12_orb3r")
+
+[node name="cs3" type="MeshInstance3D" parent="graff_pic" unique_id=815029390]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 6.993822e-09, 0, -8.7422784e-08, 0.04, 4.206094, 0.39083785, -3.5198283)
+mesh = SubResource("BoxMesh_dycwk")
+
+[node name="baseball" type="MeshInstance3D" parent="graff_pic" unique_id=1833980005]
+transform = Transform3D(0.5, 0, 0, 0, 0.5042, 0, 0, 0, 0.0395, 6.442008, 0.48516268, -3.1166742)
+mesh = SubResource("BoxMesh_3gdu7")
+
+[node name="cs4" type="MeshInstance3D" parent="graff_pic" unique_id=331554778]
+transform = Transform3D(0.5, 0, 8.470329e-24, 0, 0.5, 0, -1.0587912e-22, 0, 0.04, 6.9218884, 0.5824023, -2.8757305)
+mesh = SubResource("BoxMesh_ghqrt")
+
+[node name="cs5" type="MeshInstance3D" parent="graff_pic" unique_id=439347499]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.05, 3.6938803, 0.58997244, -2.9229808)
+mesh = SubResource("BoxMesh_b11tx")
+
+[node name="cs6" type="MeshInstance3D" parent="graff_pic" unique_id=646894472]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.05, 3.1551974, 0.35477397, -2.578959)
+mesh = SubResource("BoxMesh_sr5n7")
+surface_material_override/0 = ExtResource("14_0gf71")
+
+[node name="cs1_Mat" parent="graff_pic" unique_id=1945139621 instance=ExtResource("15_n7r30")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 5.822829, 0, -3.2911177)

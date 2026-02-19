@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bs1kd1utfc1tf"]
+
+[ext_resource type="PackedScene" uid="uid://ccpnwgm0o10an" path="res://assets/Blender Assets/Modular_building_Roof/Modular_buildingRoof_3k.FBX" id="1_yieoh"]
+[ext_resource type="Texture2D" uid="uid://dpjv0d3x46vk2" path="res://assets/Blender Assets/Modular_building_Roof/MI_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_2K_BaseColor.png" id="2_f3dtf"]
+[ext_resource type="Texture2D" uid="uid://lfw7bff5logy" path="res://assets/Blender Assets/Modular_building_Roof/MI_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_2K_MetallicRoughness.png" id="3_l30bg"]
+[ext_resource type="Texture2D" uid="uid://y83g4q4jlfrb" path="res://assets/Blender Assets/Modular_building_Roof/MI_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_2K_Normal.png" id="4_nie3e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v1m1s"]
+albedo_texture = ExtResource("2_f3dtf")
+metallic = 1.0
+metallic_texture = ExtResource("3_l30bg")
+roughness_texture = ExtResource("4_nie3e")
+
+[node name="Modular_buildingRoof_3k" unique_id=1520043252 instance=ExtResource("1_yieoh")]
+
+[node name="S_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_lod3_Var1_LOD0" parent="S_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_lod3_Var1" parent_id_path=PackedInt32Array(1705851240) index="0" unique_id=1926035362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03562689, -0.27522898, 0.43520075)
+surface_material_override/0 = SubResource("StandardMaterial3D_v1m1s")
+
+[node name="S_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_lod3_Var1_LOD1" parent="S_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_lod3_Var1" parent_id_path=PackedInt32Array(1705851240) index="1" unique_id=1314133263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.764555, 0, 0)
+
+[node name="S_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_lod3_Var1_LOD2" parent="S_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_lod3_Var1" parent_id_path=PackedInt32Array(1705851240) index="2" unique_id=1191852509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7666082, 0, 0)
+
+[node name="S_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_lod3_Var1_LOD3" parent="S_Modular_Building_Roof_2nd_Section_Kit_ve4mdhxdw_lod3_Var1" parent_id_path=PackedInt32Array(1705851240) index="3" unique_id=1955702251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8203108, 0, 0)

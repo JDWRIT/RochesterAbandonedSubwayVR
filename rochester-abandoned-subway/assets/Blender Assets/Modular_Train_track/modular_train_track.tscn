@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bd8a4umfrori"]
+
+[ext_resource type="PackedScene" uid="uid://dwlgkmyq0u1wk" path="res://assets/Blender Assets/Modular_Train_track/Modular_train_track.FBX" id="1_6r5dx"]
+[ext_resource type="Texture2D" uid="uid://cc16hryqjupqa" path="res://assets/Blender Assets/Modular_Train_track/MI_Modular_Train_Track_ufekaevdw_2K_BaseColor.png" id="2_xaxvj"]
+[ext_resource type="Texture2D" uid="uid://s2ctljliyuwa" path="res://assets/Blender Assets/Modular_Train_track/MI_Modular_Train_Track_ufekaevdw_2K_MetallicRoughness.png" id="3_2fh8x"]
+[ext_resource type="Texture2D" uid="uid://din71w7axu81n" path="res://assets/Blender Assets/Modular_Train_track/Modular_Train_track_tecture.EXR" id="4_gi2x7"]
+[ext_resource type="Material" uid="uid://b82cd38fjkg35" path="res://assets/textures/train_track/train_track_base_color.tres" id="5_amcl2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yofyy"]
+albedo_texture = ExtResource("2_xaxvj")
+metallic = 1.0
+metallic_texture = ExtResource("3_2fh8x")
+roughness_texture = ExtResource("4_gi2x7")
+
+[node name="Modular_train_track" unique_id=1714121643 instance=ExtResource("1_6r5dx")]
+
+[node name="S_Modular_Train_Track_ufekaevdw_lod3_Var1_LOD0" parent="S_Modular_Train_Track_ufekaevdw_lod3_Var1" parent_id_path=PackedInt32Array(530056113) index="0" unique_id=1801202138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_yofyy")
+
+[node name="S_Modular_Train_Track_ufekaevdw_lod3_Var1_LOD1" parent="S_Modular_Train_Track_ufekaevdw_lod3_Var1" parent_id_path=PackedInt32Array(530056113) index="1" unique_id=1923417142]
+surface_material_override/0 = ExtResource("5_amcl2")
+
+[node name="S_Modular_Train_Track_ufekaevdw_lod3_Var1_LOD2" parent="S_Modular_Train_Track_ufekaevdw_lod3_Var1" parent_id_path=PackedInt32Array(530056113) index="2" unique_id=1457418836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="S_Modular_Train_Track_ufekaevdw_lod3_Var1_LOD3" parent="S_Modular_Train_Track_ufekaevdw_lod3_Var1" parent_id_path=PackedInt32Array(530056113) index="3" unique_id=645908929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+surface_material_override/0 = ExtResource("5_amcl2")

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://crmf2cayki2x1"]
+
+[ext_resource type="Texture2D" uid="uid://cbgw4i1inb2vy" path="res://assets/Blender Assets/Grafitii & PIctures/cs1.PNG" id="1_cd16c"]
+
+[resource]
+albedo_texture = ExtResource("1_cd16c")
+uv1_scale = Vector3(3, 3, 3)

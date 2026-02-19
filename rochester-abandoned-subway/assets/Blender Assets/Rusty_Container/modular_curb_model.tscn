@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c3w3tsw64e15o"]
+
+[ext_resource type="PackedScene" uid="uid://ds7gg2xmhc0db" path="res://assets/Blender Assets/Modular_Curb/Modular_Curb_model.FBX" id="1_2sssg"]
+[ext_resource type="Texture2D" uid="uid://mb4ogkrqprs3" path="res://assets/Blender Assets/Modular_Curb/MI_Modular_Curb_uh2jbckdw_2K_BaseColor.png" id="2_rxtc8"]
+[ext_resource type="Texture2D" uid="uid://cxwf6gecnuygi" path="res://assets/Blender Assets/Modular_Curb/MI_Modular_Curb_uh2jbckdw_2K_MetallicRoughness.png" id="3_rreog"]
+[ext_resource type="Texture2D" uid="uid://bm7jyrlbtbp4v" path="res://assets/Blender Assets/Modular_Curb/MI_Modular_Curb_uh2jbckdw_2K_Normal.png" id="4_bkcps"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_im2ig"]
+albedo_texture = ExtResource("2_rxtc8")
+metallic = 1.0
+metallic_texture = ExtResource("3_rreog")
+roughness_texture = ExtResource("4_bkcps")
+
+[node name="Modular_Curb_model" unique_id=1812722042 instance=ExtResource("1_2sssg")]
+
+[node name="S_Modular_Curb_uh2jbckdw_lod3_Var1_LOD0" parent="S_Modular_Curb_uh2jbckdw_lod3_Var1" parent_id_path=PackedInt32Array(1643844801) index="0" unique_id=1138748855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.451153, 0, 0)
+
+[node name="S_Modular_Curb_uh2jbckdw_lod3_Var1_LOD2" parent="S_Modular_Curb_uh2jbckdw_lod3_Var1" parent_id_path=PackedInt32Array(1643844801) index="2" unique_id=536506424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.290864, 0.16317046, -0.06009665)
+surface_material_override/0 = SubResource("StandardMaterial3D_im2ig")
+
+[node name="S_Modular_Curb_uh2jbckdw_lod3_Var1_LOD3" parent="S_Modular_Curb_uh2jbckdw_lod3_Var1" parent_id_path=PackedInt32Array(1643844801) index="3" unique_id=570388638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.886775, 0, 0)

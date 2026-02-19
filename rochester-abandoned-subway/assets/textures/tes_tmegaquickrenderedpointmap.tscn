@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dgviixy37u10s"]
+
+[ext_resource type="PackedScene" uid="uid://bomdgm673v4vi" path="res://drive_aquaduct_models/TESTmegaquickrenderedpointmap.gltf" id="1_pjdbm"]
+
+[node name="TESTmegaquickrenderedpointmap" unique_id=284063851 instance=ExtResource("1_pjdbm")]

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cagbgns5r7myv"]
+
+[ext_resource type="Texture2D" uid="uid://c2o1npik3228d" path="res://assets/Blender Assets/Grafitii & PIctures/cs3_Mat_BaseColor.png" id="1_3m40d"]
+
+[resource]
+albedo_texture = ExtResource("1_3m40d")
+uv1_scale = Vector3(3, 3, 1.5)
+uv1_offset = Vector3(1, 0.6, 0)
+billboard_keep_scale = true

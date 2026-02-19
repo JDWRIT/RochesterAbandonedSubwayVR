@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cj47gfryt7781"]
+
+[ext_resource type="PackedScene" uid="uid://b38bcsfwthy1o" path="res://assets/Blender Assets/Rusty_Container/Rusty_Container.FBX" id="1_kv6rb"]
+[ext_resource type="Texture2D" uid="uid://b7h46dh2c71g3" path="res://assets/Blender Assets/Rusty_Container/MI_Rusty_Container_tlsmeaqiw_2K_BaseColor.png" id="2_26b31"]
+[ext_resource type="Texture2D" uid="uid://dsgigamomlmhc" path="res://assets/Blender Assets/Rusty_Container/MI_Rusty_Container_tlsmeaqiw_2K_MetallicRoughness.png" id="3_4fm7a"]
+[ext_resource type="Texture2D" uid="uid://jy4x6pi46g0c" path="res://assets/Blender Assets/Rusty_Container/MI_Rusty_Container_tlsmeaqiw_2K_Normal.png" id="4_mlbko"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8xgi8"]
+albedo_texture = ExtResource("2_26b31")
+metallic = 1.0
+metallic_texture = ExtResource("3_4fm7a")
+roughness_texture = ExtResource("4_mlbko")
+
+[node name="Rusty_Container" unique_id=1545680295 instance=ExtResource("1_kv6rb")]
+
+[node name="S_Rusty_Container_tlsmeaqiw_lod3_LOD0" parent="S_Rusty_Container_tlsmeaqiw_lod3" parent_id_path=PackedInt32Array(1498437418) index="0" unique_id=1134792878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1703451, 0)
+
+[node name="S_Rusty_Container_tlsmeaqiw_lod3_LOD1" parent="S_Rusty_Container_tlsmeaqiw_lod3" parent_id_path=PackedInt32Array(1498437418) index="1" unique_id=1338496916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19203597, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_8xgi8")
+
+[node name="S_Rusty_Container_tlsmeaqiw_lod3_LOD3" parent="S_Rusty_Container_tlsmeaqiw_lod3" parent_id_path=PackedInt32Array(1498437418) index="3" unique_id=2014718876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35567027, 0)

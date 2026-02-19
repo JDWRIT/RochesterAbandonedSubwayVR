@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://br27dtyh3ptpx"]
+
+[ext_resource type="PackedScene" uid="uid://cjw6hm2i4lbpm" path="res://assets/Blender Assets/Concrete_Pillar/Game/Megascans/3D_Assets/Concrete_Pillar_ujkgddqva/S_Concrete_Pillar_ujkgddqva_lod3_Var1.FBX" id="1_tu5ql"]
+[ext_resource type="Texture2D" uid="uid://dnkjb7s1psiww" path="res://assets/Blender Assets/Concrete_Pillar/Game/Megascans/3D_Assets/Concrete_Pillar_ujkgddqva/MI_Concrete_Pillar_ujkgddqva_2K_BaseColor.png" id="2_eo303"]
+[ext_resource type="Texture2D" uid="uid://v8lfwx1l4212" path="res://assets/Blender Assets/Concrete_Pillar/Game/Megascans/3D_Assets/Concrete_Pillar_ujkgddqva/MI_Concrete_Pillar_ujkgddqva_2K_MetallicRoughness.png" id="3_fg44s"]
+[ext_resource type="Texture2D" uid="uid://bxijpoftxr1gw" path="res://assets/Blender Assets/Concrete_Pillar/Game/Megascans/3D_Assets/Concrete_Pillar_ujkgddqva/MI_Concrete_Pillar_ujkgddqva_2K_Normal.png" id="4_lx1c5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fod6h"]
+albedo_texture = ExtResource("2_eo303")
+metallic = 1.0
+metallic_texture = ExtResource("3_fg44s")
+roughness_texture = ExtResource("4_lx1c5")
+
+[node name="S_Concrete_Pillar_ujkgddqva_lod3_Var1" unique_id=1348615297 instance=ExtResource("1_tu5ql")]
+
+[node name="S_Concrete_Pillar_ujkgddqva_lod3_Var1_LOD0" parent="S_Concrete_Pillar_ujkgddqva_lod3_Var1" parent_id_path=PackedInt32Array(557914561) index="0" unique_id=1848836407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.53748, 0)
+
+[node name="S_Concrete_Pillar_ujkgddqva_lod3_Var1_LOD1" parent="S_Concrete_Pillar_ujkgddqva_lod3_Var1" parent_id_path=PackedInt32Array(557914561) index="1" unique_id=1955203807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.3091283, 0)
+
+[node name="S_Concrete_Pillar_ujkgddqva_lod3_Var1_LOD2" parent="S_Concrete_Pillar_ujkgddqva_lod3_Var1" parent_id_path=PackedInt32Array(557914561) index="2" unique_id=1359687532]
+surface_material_override/0 = SubResource("StandardMaterial3D_fod6h")
+
+[node name="S_Concrete_Pillar_ujkgddqva_lod3_Var1_LOD3" parent="S_Concrete_Pillar_ujkgddqva_lod3_Var1" parent_id_path=PackedInt32Array(557914561) index="3" unique_id=1258711025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4638767, 0)

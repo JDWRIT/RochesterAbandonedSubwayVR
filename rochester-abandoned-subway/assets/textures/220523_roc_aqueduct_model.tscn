@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cotpfgupa8b3a"]
+
+[ext_resource type="PackedScene" uid="uid://c2rl4rhbfvv0d" path="res://drive_aquaduct_models/220523_ROC Aqueduct Model.gltf" id="1_gticd"]
+
+[node name="220523_ROC Aqueduct Model" unique_id=180927915 instance=ExtResource("1_gticd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -227.27779, 0, 478.33838)
