@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://3gihe2guy28r"]
+
+[ext_resource type="PackedScene" uid="uid://ctwo5vr47g2qy" path="res://Archways/Aquaduct_road_inners169.FBX" id="1_3efu2"]
+
+[node name="Aquaduct_road_inners169" unique_id=2088151214 instance=ExtResource("1_3efu2")]

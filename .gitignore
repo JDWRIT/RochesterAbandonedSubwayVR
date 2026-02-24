@@ -18,3 +18,4 @@ mono_crash.*.json
 # Builds ignore
 rochester-abandoned-subway/apks
 rochester-abandoned-subway/drive_aquaduct_models
+rochester-abandoned-subway/Archways
