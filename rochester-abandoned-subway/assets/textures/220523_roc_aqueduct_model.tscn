@@ -1,6 +1,71 @@
 [gd_scene format=3 uid="uid://cotpfgupa8b3a"]
 
 [ext_resource type="PackedScene" uid="uid://c2rl4rhbfvv0d" path="res://drive_aquaduct_models/220523_ROC Aqueduct Model.gltf" id="1_gticd"]
+[ext_resource type="Material" uid="uid://crmf2cayki2x1" path="res://assets/textures/cs1.tres" id="2_hy4lc"]
+[ext_resource type="Texture2D" uid="uid://cbgw4i1inb2vy" path="res://assets/Blender Assets/Grafitii & PIctures/cs1.PNG" id="3_f1rrl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gticd"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hy4lc"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1rrl"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcfhw"]
+albedo_color = Color(1, 1, 0.54509807, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3bcl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_roi4p"]
+albedo_color = Color(0, 1, 0.69411767, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3sim8"]
+albedo_color = Color(0.84705883, 0.6431373, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yr6c7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lr7j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_f1rrl"]
+material = ExtResource("2_hy4lc")
+size = Vector3(2.1, 2.1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pcfhw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4mggh"]
+transparency = 1
+albedo_texture = ExtResource("3_f1rrl")
+
+[sub_resource type="BoxMesh" id="BoxMesh_pcfhw"]
 
 [node name="220523_ROC Aqueduct Model" unique_id=180927915 instance=ExtResource("1_gticd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -227.27779, 0, 478.33838)
+
+[node name="Mesh113" parent="." index="112" unique_id=994948317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -156.659, 0, -59.394)
+surface_material_override/0 = SubResource("StandardMaterial3D_gticd")
+surface_material_override/1 = SubResource("StandardMaterial3D_hy4lc")
+surface_material_override/2 = SubResource("StandardMaterial3D_f1rrl")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcfhw")
+surface_material_override/4 = SubResource("StandardMaterial3D_u3bcl")
+surface_material_override/5 = SubResource("StandardMaterial3D_roi4p")
+surface_material_override/6 = SubResource("StandardMaterial3D_3sim8")
+surface_material_override/7 = SubResource("StandardMaterial3D_yr6c7")
+
+[node name="Mesh727" parent="." index="726" unique_id=1652776002]
+surface_material_override/1 = SubResource("StandardMaterial3D_3lr7j")
+
+[node name="ref" type="MeshInstance3D" parent="." index="769" unique_id=1524534253]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 0, 444.962, 8.175, -525.176)
+mesh = SubResource("BoxMesh_f1rrl")
+
+[node name="cs1_plane" type="MeshInstance3D" parent="." index="770" unique_id=1727992058]
+transform = Transform3D(6.850465, 0, 0, 0, -8.742278e-08, -2.0485122, 0, 2, -8.954331e-08, 449.015, 1.8157985, -526.91925)
+mesh = SubResource("PlaneMesh_pcfhw")
+surface_material_override/0 = SubResource("StandardMaterial3D_4mggh")
+
+[node name="measurestick" type="MeshInstance3D" parent="." index="771" unique_id=2037508471]
+transform = Transform3D(9.514096, 0, 0, 0, 0.98164654, 0, 0, 0, 0.771648, 450.20905, 5.974182, -522.85913)
+mesh = SubResource("BoxMesh_pcfhw")

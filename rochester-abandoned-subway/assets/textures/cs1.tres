@@ -3,5 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://cbgw4i1inb2vy" path="res://assets/Blender Assets/Grafitii & PIctures/cs1.PNG" id="1_cd16c"]
 
 [resource]
+transparency = 1
 albedo_texture = ExtResource("1_cd16c")
 uv1_scale = Vector3(3, 3, 3)

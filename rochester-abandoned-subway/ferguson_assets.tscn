@@ -81,7 +81,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 6.993822e-09, 0, -8.7422784e-08, 0.04
 mesh = SubResource("BoxMesh_dycwk")
 
 [node name="baseball" type="MeshInstance3D" parent="graff_pic" unique_id=1833980005]
-transform = Transform3D(0.5, 0, 0, 0, 0.5042, 0, 0, 0, 0.0395, 6.442008, 0.48516268, -3.1166742)
+transform = Transform3D(0.5, 0, 0, 0, 0.5042, 0, 0, 0, 0.0395, 5.276333, 0.48516268, -2.467551)
 mesh = SubResource("BoxMesh_3gdu7")
 
 [node name="cs4" type="MeshInstance3D" parent="graff_pic" unique_id=331554778]

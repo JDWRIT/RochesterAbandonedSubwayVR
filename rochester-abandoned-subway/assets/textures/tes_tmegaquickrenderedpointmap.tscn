@@ -3,3 +3,4 @@
 [ext_resource type="PackedScene" uid="uid://bomdgm673v4vi" path="res://drive_aquaduct_models/TESTmegaquickrenderedpointmap.gltf" id="1_pjdbm"]
 
 [node name="TESTmegaquickrenderedpointmap" unique_id=284063851 instance=ExtResource("1_pjdbm")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
