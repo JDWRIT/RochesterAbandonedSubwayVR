@@ -1,0 +1,8 @@
+here are all the issues with the cs files. partly to walk through the issues one by one, partly to give me an outlet.
+
+- the scaling is not consistent. i.e, no consistent dimensions, i.e, lining these up is evil hell for super-sinners
+- lighting is inconsistent. maybe we can just make the whole thing happen and night and no one will notice
+- cs7 and cs10 weren't finished. they have white where it should be transparent
+- there's a guy on cs5
+- pipes on a 2d image. heck. 3d angles on a 2d image. known issue for the past few months though so wtv
+- probably more! shoutout the cs files

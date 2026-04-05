@@ -4,6 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cbgw4i1inb2vy" path="res://assets/Blender Assets/Grafitii & PIctures/cs1.PNG" id="2_2ijxr"]
 [ext_resource type="Texture2D" uid="uid://bt1c5iificvic" path="res://assets/Blender Assets/Grafitii & PIctures/cs2.PNG" id="3_v42cn"]
 [ext_resource type="Texture2D" uid="uid://bdlkv6qko3xam" path="res://assets/Blender Assets/Grafitii & PIctures/cs3.PNG" id="4_hobwo"]
+[ext_resource type="Texture2D" uid="uid://bv23beaqeu06c" path="res://assets/Blender Assets/Grafitii & PIctures/cs4.PNG" id="5_pk6gw"]
+[ext_resource type="Texture2D" uid="uid://ba8wsooginbxl" path="res://assets/Blender Assets/Grafitii & PIctures/cs5.PNG" id="6_xyxiy"]
+[ext_resource type="Texture2D" uid="uid://b8ts21plulxu3" path="res://assets/Blender Assets/Grafitii & PIctures/cs6.PNG" id="7_rf1wl"]
+[ext_resource type="Texture2D" uid="uid://jo2weusidd4h" path="res://assets/Blender Assets/Grafitii & PIctures/cs7.PNG" id="8_7807i"]
+[ext_resource type="Texture2D" uid="uid://dqx6mmp4xogbj" path="res://assets/Blender Assets/Grafitii & PIctures/cs8.PNG" id="9_gh101"]
+[ext_resource type="Texture2D" uid="uid://dw78h2scdckgs" path="res://assets/Blender Assets/Grafitii & PIctures/cs9.PNG" id="10_l0ksp"]
+[ext_resource type="Texture2D" uid="uid://6p2w7u42osc7" path="res://assets/Blender Assets/Grafitii & PIctures/cs10.PNG" id="11_t7yxc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drhy4"]
 resource_name = "Material.004"
@@ -91,17 +98,63 @@ shadow_mesh = SubResource("ArrayMesh_ibq78")
 transparency = 1
 albedo_texture = ExtResource("2_2ijxr")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5wrw"]
-transparency = 1
-albedo_texture = ExtResource("3_v42cn")
+[sub_resource type="PlaneMesh" id="PlaneMesh_hobwo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibq78"]
 transparency = 1
+albedo_texture = ExtResource("3_v42cn")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_js2xg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3sggc"]
+transparency = 1
 albedo_texture = ExtResource("4_hobwo")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1f4m2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhr1l"]
+transparency = 1
+albedo_texture = ExtResource("5_pk6gw")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gs2dp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpwaf"]
+transparency = 1
+albedo_texture = ExtResource("6_xyxiy")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_stqvl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgkcx"]
+transparency = 1
+albedo_texture = ExtResource("7_rf1wl")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tcwcp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q23pd"]
+transparency = 1
+albedo_texture = ExtResource("8_7807i")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wvdg6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v34o6"]
+transparency = 1
+albedo_texture = ExtResource("9_gh101")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_750dw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64t1r"]
+transparency = 1
+albedo_texture = ExtResource("10_l0ksp")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_h7od0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0ocf"]
+transparency = 1
+albedo_texture = ExtResource("11_t7yxc")
 
 [node name="archway_remake_for_uv" unique_id=2025110434 instance=ExtResource("1_fuay3")]
 
-[node name="Cube_007" parent="." index="0" unique_id=1268731066]
+[node name="Cube_007" parent="." index="0" unique_id=904921942]
 transform = Transform3D(0.9890227, 0, 0, 0, 1.0064065, 0, 0, 0, 0.82890964, 0.6615448, 8.49728, -0.10505819)
 
 [node name="Cube_007" type="MeshInstance3D" parent="Cube_007" index="0" unique_id=1440846631]
@@ -116,17 +169,54 @@ mesh = SubResource("ArrayMesh_4ktfo")
 transform = Transform3D(0.98901826, 0, 0.0024400086, 0, 1.006407, 0, -0.0029113216, 0, 0.82890636, -5.682, 0, 0)
 mesh = SubResource("ArrayMesh_ven0e")
 
-[node name="cs1_plane" type="MeshInstance3D" parent="." index="1" unique_id=1066979436]
-transform = Transform3D(6.850465, 0, 0, 0, -1.3420895e-06, -2.0485115, 0, 30.703428, -8.954329e-08, -0.30546188, 1.8034651, 0.35265875)
+[node name="cs_plane" type="Node3D" parent="." index="1" unique_id=689620317]
+
+[node name="cs1_plane" type="MeshInstance3D" parent="cs_plane" index="0" unique_id=1066979436]
+transform = Transform3D(6.850465, 0, 0, 0, -1.3420895e-06, -2.0485115, 0, 30.703428, -8.954329e-08, 8.523303, 1.8910325, 0)
 mesh = SubResource("PlaneMesh_v42cn")
 surface_material_override/0 = SubResource("StandardMaterial3D_hobwo")
 
-[node name="cs2_plane" type="MeshInstance3D" parent="." index="2" unique_id=156512497]
-transform = Transform3D(3.669, 0, 0, 0, 0, -2.04, 0, 0, -8.917123e-08, 9.4, 1.816, 0.36)
-mesh = SubResource("PlaneMesh_v42cn")
-surface_material_override/0 = SubResource("StandardMaterial3D_u5wrw")
-
-[node name="cs3_plane" type="MeshInstance3D" parent="." index="3" unique_id=783492981]
-transform = Transform3D(4.956, 0, 0, 0, 0, -2.2, 0, 0, -9.616505e-08, 17.8, 1.9, 0.36)
-mesh = SubResource("PlaneMesh_v42cn")
+[node name="cs2_plane" type="MeshInstance3D" parent="cs_plane" index="1" unique_id=64437708]
+transform = Transform3D(3.66, 0, 0, 0, -4.371139e-08, -2.04, 0, 1, -8.917123e-08, 18.220852, 1.9007273, 0.02)
+mesh = SubResource("PlaneMesh_hobwo")
 surface_material_override/0 = SubResource("StandardMaterial3D_ibq78")
+
+[node name="cs3_plane" type="MeshInstance3D" parent="cs_plane" index="2" unique_id=933446011]
+transform = Transform3D(4.595, 0, 0, 0, -4.371139e-11, -2.04, 0, 0.001, -8.917123e-08, 26.187727, 1.9163854, 0.02)
+mesh = SubResource("PlaneMesh_js2xg")
+surface_material_override/0 = SubResource("StandardMaterial3D_3sggc")
+
+[node name="cs4_plane" type="MeshInstance3D" parent="cs_plane" index="3" unique_id=1224821512]
+transform = Transform3D(4.15, 0, 0, 0, -4.371139e-11, -2.04, 0, 0.001, -8.917123e-08, 34.728508, 1.8828803, 0.2)
+mesh = SubResource("PlaneMesh_1f4m2")
+surface_material_override/0 = SubResource("StandardMaterial3D_xhr1l")
+
+[node name="cs5_plane" type="MeshInstance3D" parent="cs_plane" index="4" unique_id=838649605]
+transform = Transform3D(5.305, 0, 0, 0, -4.371139e-11, -2.04, 0, 0.001, -8.917123e-08, 41.69025, 1.8177058, -0.32634312)
+mesh = SubResource("PlaneMesh_gs2dp")
+surface_material_override/0 = SubResource("StandardMaterial3D_vpwaf")
+
+[node name="cs6_plane" type="MeshInstance3D" parent="cs_plane" index="5" unique_id=645347860]
+transform = Transform3D(3.457, 0, 0, 0, -4.371139e-11, -2.04, 0, 0.001, -8.917123e-08, 49.69427, 1.8524446, -0.46659797)
+mesh = SubResource("PlaneMesh_stqvl")
+surface_material_override/0 = SubResource("StandardMaterial3D_cgkcx")
+
+[node name="cs7_plane" type="MeshInstance3D" parent="cs_plane" index="6" unique_id=1442854449]
+transform = Transform3D(4.177, 0, 0, 0, -4.371139e-11, -2.04, 0, 0.001, -8.917123e-08, 57.027405, 1.8980949, -1)
+mesh = SubResource("PlaneMesh_tcwcp")
+surface_material_override/0 = SubResource("StandardMaterial3D_q23pd")
+
+[node name="cs8_plane" type="MeshInstance3D" parent="cs_plane" index="7" unique_id=935708007]
+transform = Transform3D(4.167, 0, 0, 0, -4.371139e-11, -2.04, 0, 0.001, -8.917123e-08, 65.33148, 1.9207006, 0)
+mesh = SubResource("PlaneMesh_wvdg6")
+surface_material_override/0 = SubResource("StandardMaterial3D_v34o6")
+
+[node name="cs9_plane" type="MeshInstance3D" parent="cs_plane" index="8" unique_id=1090599391]
+transform = Transform3D(4.809, 0, 0, 0, -4.371139e-11, -2.04, 0, 0.001, -8.917123e-08, 73.689255, 1.799349, 0)
+mesh = SubResource("PlaneMesh_750dw")
+surface_material_override/0 = SubResource("StandardMaterial3D_64t1r")
+
+[node name="cs10_plane" type="MeshInstance3D" parent="cs_plane" index="9" unique_id=1209675446]
+transform = Transform3D(4.884, 0, 0, 0, -4.371139e-11, -2.04, 0, 0.001, -8.917123e-08, 82.80909, 1.7781181, -3)
+mesh = SubResource("PlaneMesh_h7od0")
+surface_material_override/0 = SubResource("StandardMaterial3D_k0ocf")
