@@ -24,6 +24,10 @@ XRToolsRumbleManager="*uid://by853dk86g1qw"
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
