@@ -15,5 +15,8 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 
+# Scenes ignore
+rochester-abandoned-subway/big_scene
+
 # Builds ignore
 rochester-abandoned-subway/apks
