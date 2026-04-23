@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dc5t2qgmhb2nf" path="res://addons/godot-xr-tools/objects/hand_pose_area.tscn" id="7_ga5yn"]
 [ext_resource type="Resource" uid="uid://ciw0f7mg4ai0k" path="res://addons/godot-xr-tools/hands/poses/pose_point_left.tres" id="8_lcqek"]
 [ext_resource type="Resource" uid="uid://bhvrpfo4ecbub" path="res://addons/godot-xr-tools/hands/poses/pose_point_right.tres" id="9_81l5o"]
+[ext_resource type="PackedScene" uid="uid://wtf6ckqeuejw" path="res://assets/jdw_push_button.tscn" id="10_ugpei"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bd3bk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -86,6 +87,10 @@ radius = 0.04
 [sub_resource type="SphereShape3D" id="SphereShape3D_lygiq"]
 radius = 0.05
 
+[sub_resource type="BoxMesh" id="BoxMesh_ugpei"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xm7cd"]
+
 [node name="PhysicalPlayerPlayground" type="Node3D" unique_id=3412258]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1853024818]
@@ -139,6 +144,7 @@ shape = SubResource("BoxShape3D_754ui")
 
 [node name="Climbable" parent="." unique_id=1363835908 instance=ExtResource("3_l2unk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2.5)
+collision_layer = 262146
 
 [node name="CollisionShape3D" parent="Climbable" index="0"]
 shape = SubResource("BoxShape3D_e0arj")
@@ -188,6 +194,23 @@ right_pose = ExtResource("9_81l5o")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PushButton/HandPoseArea" unique_id=1642453065]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025, 0)
 shape = SubResource("SphereShape3D_lygiq")
+
+[node name="ActionCube" type="RigidBody3D" parent="." unique_id=225462245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6952994, 2.1209097, -0.91104007)
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ActionCube" unique_id=1142222935]
+mesh = SubResource("BoxMesh_ugpei")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ActionCube" unique_id=1768958025]
+shape = SubResource("BoxShape3D_xm7cd")
+
+[node name="JDWPushButton" parent="." unique_id=1763357380 instance=ExtResource("10_ugpei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.775762, 1.1545225, -1.0958822)
+
+[node name="JDWPushButton2" parent="." unique_id=215523855 instance=ExtResource("10_ugpei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047208667, 1.1545223, -0.8542607)
 
 [connection signal="body_entered" from="PushButton/InteractableAreaButton" to="PushButton/InteractableAreaButton/Rumbler" method="rumble_hand"]
 [connection signal="body_exited" from="PushButton/InteractableAreaButton" to="PushButton/InteractableAreaButton/Rumbler" method="cancel_hand"]
