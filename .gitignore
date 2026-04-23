@@ -20,3 +20,6 @@ rochester-abandoned-subway/big_scene
 
 # Builds ignore
 rochester-abandoned-subway/apks
+
+# Assets ignore
+rochester-abandoned-subway/assets/SubwayModel*

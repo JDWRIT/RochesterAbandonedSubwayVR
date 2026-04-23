@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://jd7e0mt4tn1u"]
+
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_k6qi1"]
+[ext_resource type="PackedScene" uid="uid://d0lc1p4udgajy" path="res://assets/vr_player_rig.tscn" id="2_ponhk"]
+[ext_resource type="PackedScene" uid="uid://bpo4wbguibg6f" path="res://assets/SubwayModelSmaller.gltf" id="3_ponhk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bd3bk"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ff227"]
+sky_material = SubResource("ProceduralSkyMaterial_bd3bk")
+
+[sub_resource type="Environment" id="Environment_l2unk"]
+background_mode = 2
+sky = SubResource("Sky_ff227")
+tonemap_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dmqwi"]
+size = Vector3(2, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aknks"]
+albedo_color = Color(0.3180198, 0.31801978, 0.31801975, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wv2la"]
+material = SubResource("StandardMaterial3D_aknks")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xu6b7"]
+albedo_color = Color(0.34901962, 0.12156863, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k1iu7"]
+material = SubResource("StandardMaterial3D_xu6b7")
+size = Vector3(12, 1, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_754ui"]
+size = Vector3(12, 1, 12)
+
+[node name="PhysicalPlayerPlayground" type="Node3D" unique_id=3412258]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1853024818]
+environment = SubResource("Environment_l2unk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=872405303]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StartXR" parent="." unique_id=852351190 instance=ExtResource("1_k6qi1")]
+
+[node name="Table" type="StaticBody3D" parent="." unique_id=739639120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.5)
+
+[node name="TableSection" type="CollisionShape3D" parent="Table" unique_id=130956657]
+shape = SubResource("BoxShape3D_dmqwi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Table/TableSection" unique_id=915627466]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_wv2la")
+
+[node name="Column1" type="StaticBody3D" parent="." unique_id=969861794]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -1.5, 1.5, -2.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Column1" unique_id=1614483408]
+shape = SubResource("BoxShape3D_dmqwi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Column1/CollisionShape3D" unique_id=1897040262]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_wv2la")
+
+[node name="Column2" type="StaticBody3D" parent="." unique_id=94489557]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 1.5, 1.5, -2.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Column2" unique_id=452592757]
+shape = SubResource("BoxShape3D_dmqwi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Column2/CollisionShape3D" unique_id=1797406668]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_wv2la")
+
+[node name="VRPlayerRig" parent="." unique_id=1024625028 instance=ExtResource("2_ponhk")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.25, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1881761309]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1440045774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_k1iu7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=341499345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_754ui")
+
+[node name="SubwayModelSmaller" parent="." unique_id=332244793 instance=ExtResource("3_ponhk")]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, -2.7694921, 0.5044515, -1.7086551)
