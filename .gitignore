@@ -15,11 +15,11 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 
+# Scenes ignore
+rochester-abandoned-subway/big_scene
+
 # Builds ignore
 rochester-abandoned-subway/apks
-rochester-abandoned-subway/assets/SubwayModel.gltf
-rochester-abandoned-subway/assets/SubwayModel.gltf.import
-rochester-abandoned-subway/assets/SubwayModelSmaller.gltf
-rochester-abandoned-subway/assets/SubwayModelSmaller.gltf.import
-rochester-abandoned-subway/assets/SubwayModel_*.jpg
-rochester-abandoned-subway/assets/SubwayModel_*.jpg.import
+
+# Assets ignore
+rochester-abandoned-subway/assets/SubwayModel*
