@@ -17,9 +17,4 @@ mono_crash.*.json
 
 # Builds ignore
 rochester-abandoned-subway/apks
-rochester-abandoned-subway/assets/SubwayModel.gltf
-rochester-abandoned-subway/assets/SubwayModel.gltf.import
-rochester-abandoned-subway/assets/SubwayModelSmaller.gltf
-rochester-abandoned-subway/assets/SubwayModelSmaller.gltf.import
-rochester-abandoned-subway/assets/SubwayModel_*.jpg
-rochester-abandoned-subway/assets/SubwayModel_*.jpg.import
+rochester-abandoned-subway/assets/SubwayModel*
