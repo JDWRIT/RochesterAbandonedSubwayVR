@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dh7quuqfoc878"]
+
+[ext_resource type="PackedScene" uid="uid://bx11d7w1sx2i2" path="res://assets/Rusty_Container/Rusty_Container.FBX" id="1_yh7sm"]
+[ext_resource type="Texture2D" uid="uid://cscpxhj7my3vc" path="res://assets/Rusty_Container/MI_Rusty_Container_tlsmeaqiw_2K_BaseColor.png" id="2_h8cth"]
+[ext_resource type="Texture2D" uid="uid://co1q67l70yc4i" path="res://assets/Rusty_Container/MI_Rusty_Container_tlsmeaqiw_2K_MetallicRoughness.png" id="3_x3kll"]
+[ext_resource type="Texture2D" uid="uid://c6ushmqn31dm5" path="res://assets/Rusty_Container/MI_Rusty_Container_tlsmeaqiw_2K_Normal.png" id="4_oiad4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_me6nj"]
+albedo_texture = ExtResource("2_h8cth")
+metallic = 1.0
+metallic_texture = ExtResource("3_x3kll")
+roughness_texture = ExtResource("4_oiad4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_toi03"]
+albedo_texture = ExtResource("2_h8cth")
+metallic = 1.0
+metallic_texture = ExtResource("3_x3kll")
+roughness_texture = ExtResource("4_oiad4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2b460"]
+albedo_texture = ExtResource("2_h8cth")
+metallic = 1.0
+metallic_texture = ExtResource("3_x3kll")
+roughness_texture = ExtResource("4_oiad4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hpip"]
+albedo_texture = ExtResource("2_h8cth")
+metallic = 1.0
+metallic_texture = ExtResource("3_x3kll")
+roughness_texture = ExtResource("4_oiad4")
+
+[node name="Rusty_Container" unique_id=1658703661 instance=ExtResource("1_yh7sm")]
+
+[node name="S_Rusty_Container_tlsmeaqiw_lod3_LOD0" parent="S_Rusty_Container_tlsmeaqiw_lod3" parent_id_path=PackedInt32Array(780051737) index="0" unique_id=850058410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21059889, 0)
+material_override = SubResource("StandardMaterial3D_me6nj")
+
+[node name="S_Rusty_Container_tlsmeaqiw_lod3_LOD1" parent="S_Rusty_Container_tlsmeaqiw_lod3" parent_id_path=PackedInt32Array(780051737) index="1" unique_id=1138758624]
+surface_material_override/0 = SubResource("StandardMaterial3D_toi03")
+
+[node name="S_Rusty_Container_tlsmeaqiw_lod3_LOD2" parent="S_Rusty_Container_tlsmeaqiw_lod3" parent_id_path=PackedInt32Array(780051737) index="2" unique_id=1801960980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25092584)
+surface_material_override/0 = SubResource("StandardMaterial3D_2b460")
+
+[node name="S_Rusty_Container_tlsmeaqiw_lod3_LOD3" parent="S_Rusty_Container_tlsmeaqiw_lod3" parent_id_path=PackedInt32Array(780051737) index="3" unique_id=1671017210]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2262965, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_5hpip")
