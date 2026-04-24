@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://buy2xxrnt5bx5" path="res://assets/SubwayModelSmaller.gltf" id="3_ponhk"]
 [ext_resource type="Script" uid="uid://bqb3cy0ekk685" path="res://addons/godot-xr-tools/objects/climbable.gd" id="4_l5cvp"]
 [ext_resource type="Texture2D" uid="uid://jn8uqaq2714n" path="res://assets/volumetric_fog_quad_mesh_texture.webp" id="5_dwcxl"]
+[ext_resource type="Texture2D" uid="uid://bv65syapfq422" path="res://assets/IMG_1174.JPG" id="6_5ilro"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bd3bk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -136,10 +137,16 @@ proximity_fade_distance = 0.01
 distance_fade_mode = 1
 distance_fade_max_distance = 0.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vg25u"]
+size = Vector3(1, 1, 0.001)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_mtdig"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwcxl"]
 albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a1xwg"]
+size = Vector3(1, 1, 0.001)
 
 [sub_resource type="BoxMesh" id="BoxMesh_kc1gr"]
 
@@ -151,6 +158,11 @@ albedo_color = Color(0.3384729, 0.3384729, 0.33847287, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_dwcxl"]
 material = SubResource("StandardMaterial3D_5ilro")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5oqe2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4pavm"]
+albedo_texture = ExtResource("6_5ilro")
 
 [node name="PhysicalPlayerPlayground" type="Node3D" unique_id=3412258]
 
@@ -164,7 +176,7 @@ shadow_enabled = true
 [node name="StartXR" parent="." unique_id=852351190 instance=ExtResource("1_k6qi1")]
 
 [node name="VRPlayerRig" parent="." unique_id=1024625028 instance=ExtResource("2_ponhk")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.25, 0)
+transform = Transform3D(-0.028514918, 0, 0.9995934, 0, 1, 0, -0.9995934, 0, -0.028514918, 10.031608, 0.25, -1.5844883)
 
 [node name="SubwayModelSmaller" parent="." unique_id=332244793 instance=ExtResource("3_ponhk")]
 transform = Transform3D(0.99697053, 0, 0, 0, -4.357896e-08, 0.9969705, 0, -0.9969705, -4.357896e-08, -2.7883406, 0.4856038, -1.7086551)
@@ -1040,6 +1052,11 @@ transform = Transform3D(0.99999994, 0, 2.220446e-16, 0, 1, 0, 4.5474735e-13, 0, 
 mesh = SubResource("QuadMesh_5ilro")
 surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="fakefog/baseballboyside/cormacs_fog8" unique_id=686555789]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fakefog/baseballboyside/cormacs_fog8/StaticBody3D" unique_id=1483780912]
+shape = SubResource("BoxShape3D_vg25u")
+
 [node name="black" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=34703546]
 transform = Transform3D(-2.3041324e-14, -5.699837e-07, 0.2236671, -12.059198, 5.6998397e-07, 0, 5.2712403e-07, 13.039707, 9.776642e-09, -3.7252903e-09, 0.19221655, -3.9233131)
 mesh = SubResource("PlaneMesh_mtdig")
@@ -1083,6 +1100,11 @@ transform = Transform3D(0.99456346, 0, -0.104129374, 0, 0.9999987, 0, 0.10412934
 mesh = SubResource("QuadMesh_5ilro")
 surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="fakefog/notbaseballboyside/cormacs_fog7" unique_id=122669462]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fakefog/notbaseballboyside/cormacs_fog7/StaticBody3D" unique_id=204060718]
+shape = SubResource("BoxShape3D_a1xwg")
+
 [node name="cormacs_fog8" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=2055805462]
 transform = Transform3D(0.99456346, 0, -0.104129374, 0, 0.9999987, 0, 0.104129344, 0, 0.9945636, -41.4137, -0.26329058, 58.902668)
 mesh = SubResource("QuadMesh_5ilro")
@@ -1094,6 +1116,25 @@ mesh = SubResource("BoxMesh_kc1gr")
 surface_material_override/0 = SubResource("StandardMaterial3D_5oqe2")
 
 [node name="text" type="Node3D" parent="." unique_id=1257865397]
+
+[node name="TUTTEXT" type="Node3D" parent="text" unique_id=125559860]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.692396, -17.494942, -2.9547458)
+
+[node name="txt" type="Label3D" parent="text/TUTTEXT" unique_id=698955828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.319769, 0)
+text = "Welcome to the Virtual Reality Rochester Subway!
+
+Here, you can press buttons to learn about the art
+and history contained within these tunnels. And if
+you're feeling a little adventerous, feel free to climb 
+through the arches!
+
+Just turn around and begin exploring!
+"
+
+[node name="bckg" type="MeshInstance3D" parent="text/TUTTEXT" unique_id=794009612]
+transform = Transform3D(4.2, 0, 0, 0, 1.6, 0, 0, 0, 1, 0, 19.30909, -0.016864538)
+mesh = SubResource("QuadMesh_dwcxl")
 
 [node name="textONE" type="Node3D" parent="text" unique_id=1175528317]
 transform = Transform3D(-0.997867, 0, -0.065281324, 0, 1, 0, 0.065281324, 0, -0.997867, 4.7907667, -18.260464, 1.1194296)
@@ -1191,3 +1232,8 @@ impossible standard."
 [node name="bckg" type="MeshInstance3D" parent="text/textSIX" unique_id=2026045144]
 transform = Transform3D(3.8, 0, 0, 0, 1.7, 0, 0, 0, 1, 0, 19.30909, -0.016864538)
 mesh = SubResource("QuadMesh_dwcxl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=261790902]
+transform = Transform3D(-1.6751279, -6.7875764e-05, 5.488846e-09, 0, -4.371139e-11, -1.85, 0.113963395, -0.0009976939, 8.067958e-08, 0.7946274, 2.2685108, 1.5184705)
+mesh = SubResource("PlaneMesh_5oqe2")
+surface_material_override/0 = SubResource("StandardMaterial3D_4pavm")
