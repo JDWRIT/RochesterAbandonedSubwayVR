@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bfcxnya30aoce"]
+
+[ext_resource type="PackedScene" uid="uid://wtf6ckqeuejw" path="res://assets/jdw_push_button.tscn" id="1_4eynv"]
+[ext_resource type="Script" uid="uid://ixrmk3gye481" path="res://scripts/jdw_teleport_button.gd" id="2_h702m"]
+
+[node name="JDWTeleportButton" unique_id=1763357380 instance=ExtResource("1_4eynv")]
+
+[node name="Button" parent="." index="1" unique_id=1170820408]
+script = ExtResource("2_h702m")
