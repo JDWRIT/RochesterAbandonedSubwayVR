@@ -1,6 +1,8 @@
 extends Area3D
 
+@export var vis_list : Array[Node]
+
 func _on_body_entered(_body: Node3D) -> void:
-	#anim_player.play("button_down")
-	#get_node("./ButtonAudioPlayer").play()
 	$ButtonAnimPlayer.play("button_down")
+	for n in vis_list:
+		n.visible = !n.visible

@@ -91,6 +91,24 @@ radius = 0.05
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xm7cd"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ugpei"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xm7cd"]
+material = SubResource("StandardMaterial3D_ugpei")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ga5yn"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lcqek"]
+material = SubResource("StandardMaterial3D_ga5yn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_81l5o"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_itpvw"]
+material = SubResource("StandardMaterial3D_81l5o")
+
 [node name="PhysicalPlayerPlayground" type="Node3D" unique_id=3412258]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1853024818]
@@ -212,7 +230,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.775762, 1.1545225, -1.0958
 [node name="JDWPushButton2" parent="." unique_id=215523855 instance=ExtResource("10_ugpei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047208667, 1.1545223, -0.8542607)
 
+[node name="JDWPushButton3" parent="." unique_id=442589274 instance=ExtResource("10_ugpei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047208667, 1.1545223, 1.9998736)
+
+[node name="Button" parent="JDWPushButton3" index="1" unique_id=1170820408 node_paths=PackedStringArray("vis_list")]
+vis_list = [NodePath("../../MeshInstance3D"), NodePath("../../MeshInstance3D2"), NodePath("../../MeshInstance3D3")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1743060718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6762881, 1.181694, 4.032124)
+visible = false
+mesh = SubResource("BoxMesh_xm7cd")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1760254124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030808687, 1.181694, 5.0692096)
+visible = false
+mesh = SubResource("BoxMesh_lcqek")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2093482580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8748238, 1.181694, 3.685087)
+visible = false
+mesh = SubResource("BoxMesh_itpvw")
+
 [connection signal="body_entered" from="PushButton/InteractableAreaButton" to="PushButton/InteractableAreaButton/Rumbler" method="rumble_hand"]
 [connection signal="body_exited" from="PushButton/InteractableAreaButton" to="PushButton/InteractableAreaButton/Rumbler" method="cancel_hand"]
 
 [editable path="Climbable"]
+[editable path="JDWPushButton3"]
