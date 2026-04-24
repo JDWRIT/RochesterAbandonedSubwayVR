@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d0lc1p4udgajy" path="res://assets/vr_player_rig.tscn" id="2_ponhk"]
 [ext_resource type="PackedScene" uid="uid://buy2xxrnt5bx5" path="res://assets/SubwayModelSmaller.gltf" id="3_ponhk"]
 [ext_resource type="Script" uid="uid://bqb3cy0ekk685" path="res://addons/godot-xr-tools/objects/climbable.gd" id="4_l5cvp"]
+[ext_resource type="Texture2D" uid="uid://jn8uqaq2714n" path="res://assets/volumetric_fog_quad_mesh_texture.webp" id="5_dwcxl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bd3bk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -122,7 +123,34 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0u1nm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x355o"]
-size = Vector3(3.9345245, 0.12939453, 0.5508728)
+size = Vector3(4.283964, 0.12939453, 0.3720703)
+
+[sub_resource type="QuadMesh" id="QuadMesh_5ilro"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kc1gr"]
+shading_mode = 0
+albedo_color = Color(0.94, 0.94, 0.94, 1)
+albedo_texture = ExtResource("5_dwcxl")
+proximity_fade_enabled = true
+proximity_fade_distance = 0.01
+distance_fade_mode = 1
+distance_fade_max_distance = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mtdig"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwcxl"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kc1gr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5oqe2"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ilro"]
+albedo_color = Color(0.3384729, 0.3384729, 0.33847287, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_dwcxl"]
+material = SubResource("StandardMaterial3D_5ilro")
 
 [node name="PhysicalPlayerPlayground" type="Node3D" unique_id=3412258]
 
@@ -875,7 +903,7 @@ collision_mask = 0
 script = ExtResource("4_l5cvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="climb/Climbable4" unique_id=2023523283]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11426544, 0.16951534, -0.25126028)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009502411, 0.16951534, -0.25126123)
 shape = SubResource("BoxShape3D_x355o")
 debug_color = Color(0.089999974, 0.5298331, 1, 1)
 
@@ -886,7 +914,7 @@ collision_mask = 0
 script = ExtResource("4_l5cvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="climb/Climbable5" unique_id=1096637600]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027435303, 0.20812038, -0.25427222)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011844635, 0.20812038, -0.25427246)
 shape = SubResource("BoxShape3D_x355o")
 debug_color = Color(0.089999974, 0.5298331, 1, 1)
 
@@ -897,7 +925,7 @@ collision_mask = 0
 script = ExtResource("4_l5cvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="climb/Climbable6" unique_id=513875387]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027435303, 0.16228738, -0.2542727)
+transform = Transform3D(0.99844074, 0, -0.05582148, 0, 1, 0, 0.05582148, 0, 0.99844074, -0.018716812, 0.16228738, -0.3793273)
 shape = SubResource("BoxShape3D_x355o")
 debug_color = Color(0.089999974, 0.5298331, 1, 1)
 
@@ -908,7 +936,7 @@ collision_mask = 0
 script = ExtResource("4_l5cvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="climb/Climbable7" unique_id=2008114096]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027435303, 0.16589549, -0.25427234)
+transform = Transform3D(0.9986577, 0, -0.05179564, 0, 1, 0, 0.05179564, 0, 0.9986577, 0.017066956, 0.16589549, -0.25427198)
 shape = SubResource("BoxShape3D_x355o")
 debug_color = Color(0.089999974, 0.5298331, 1, 1)
 
@@ -919,7 +947,7 @@ collision_mask = 0
 script = ExtResource("4_l5cvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="climb/Climbable8" unique_id=1548039305]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027435303, 0.18757454, -0.25427246)
+transform = Transform3D(0.9995385, 0, -0.030381493, 0, 1, 0, 0.030381493, 0, 0.9995385, 0.037107468, 0.18757454, -0.3322966)
 shape = SubResource("BoxShape3D_x355o")
 debug_color = Color(0.089999974, 0.5298331, 1, 1)
 
@@ -930,7 +958,7 @@ collision_mask = 0
 script = ExtResource("4_l5cvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="climb/Climbable9" unique_id=95772024]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027435541, 0.1341187, -0.25427234)
+transform = Transform3D(0.99853534, 0, -0.05411374, 0, 1, 0, 0.05411374, 0, 0.99853534, 0.082196236, 0.1341187, -0.32746196)
 shape = SubResource("BoxShape3D_x355o")
 debug_color = Color(0.089999974, 0.5298331, 1, 1)
 
@@ -941,7 +969,7 @@ collision_mask = 0
 script = ExtResource("4_l5cvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="climb/Climbable10" unique_id=318417999]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0.027435303, 0.179997, -0.25427258)
+transform = Transform3D(1.0000042, 0, -2.0489097e-08, 0, 1, 0, 2.0489097e-08, 0, 1.0000042, -0.05865431, 0.179997, -0.18410993)
 shape = SubResource("BoxShape3D_x355o")
 debug_color = Color(0.089999974, 0.5298331, 1, 1)
 
@@ -952,7 +980,7 @@ collision_mask = 0
 script = ExtResource("4_l5cvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="climb/Climbable11" unique_id=1197561430]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027435303, 0.18757454, -0.25427246)
+transform = Transform3D(0.9974909, 0, -0.07076635, 0, 1, 0, 0.07076635, 0, 0.9974909, 0.044312477, 0.18757454, -0.32162094)
 shape = SubResource("BoxShape3D_x355o")
 debug_color = Color(0.089999974, 0.5298331, 1, 1)
 
@@ -963,6 +991,203 @@ collision_mask = 0
 script = ExtResource("4_l5cvp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="climb/Climbable12" unique_id=280938574]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027436256, 0.14195925, -0.25427234)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011955261, 0.14195925, -0.5572065)
 shape = SubResource("BoxShape3D_x355o")
 debug_color = Color(0.089999974, 0.5298331, 1, 1)
+
+[node name="fakefog" type="Node3D" parent="." unique_id=112074798]
+transform = Transform3D(-1.8598284e-06, 0, -0.99999964, 0, 15.157851, 0, 42.547913, 0, -4.3711374e-08, 15.716013, -1.119653, 2.4585037)
+
+[node name="baseballboyside" type="Node3D" parent="fakefog" unique_id=504372827]
+
+[node name="cormacs_fog" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=566111710]
+transform = Transform3D(0.99999994, 0, 2.220446e-16, 0, 1, 0, 4.5474735e-13, 0, 1, -3.7252903e-09, 0, -3.4882946)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog2" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=254422272]
+transform = Transform3D(0.99999994, 0, 2.220446e-16, 0, 1, 0, 4.5474735e-13, 0, 1, -3.7252903e-09, 0, -2.8716373)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog3" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=563470767]
+transform = Transform3D(0.99999994, 0, 2.220446e-16, 0, 1, 0, 4.5474735e-13, 0, 1, -3.7252903e-09, 0, -1.9267063)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog4" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=1355399262]
+transform = Transform3D(0.99999994, 0, 2.220446e-16, 0, 1, 0, 4.5474735e-13, 0, 1, -3.7252903e-09, 0, -1.9026012)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog5" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=1554841753]
+transform = Transform3D(0.99999994, 0, 2.220446e-16, 0, 1, 0, 4.5474735e-13, 0, 1, -3.7252903e-09, 0, -1.8664074)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog6" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=1986738960]
+transform = Transform3D(0.99999994, 0, 2.220446e-16, 0, 1, 0, 4.5474735e-13, 0, 1, -3.7252903e-09, 0, -1.926981)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog7" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=82728840]
+transform = Transform3D(0.99999994, 0, 2.220446e-16, 0, 1, 0, 4.5474735e-13, 0, 1, -3.7252903e-09, 0, -1.2968998)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog8" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=13300365]
+transform = Transform3D(0.99999994, 0, 2.220446e-16, 0, 1, 0, 4.5474735e-13, 0, 1, -3.7252903e-09, 0, -1.333664)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="black" type="MeshInstance3D" parent="fakefog/baseballboyside" unique_id=34703546]
+transform = Transform3D(-2.3041324e-14, -5.699837e-07, 0.2236671, -12.059198, 5.6998397e-07, 0, 5.2712403e-07, 13.039707, 9.776642e-09, -3.7252903e-09, 0.19221655, -3.9233131)
+mesh = SubResource("PlaneMesh_mtdig")
+surface_material_override/0 = SubResource("StandardMaterial3D_dwcxl")
+
+[node name="notbaseballboyside" type="Node3D" parent="fakefog" unique_id=336037734]
+transform = Transform3D(-0.80406487, 0.17993575, -0.5666592, 0.14708056, 0.9836802, 0.10365361, 0.5760615, -3.3464977e-07, -0.81740624, 0.07122579, 0.2632909, 146.38663)
+
+[node name="cormacs_fog" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=1999069481]
+transform = Transform3D(0.99456346, 0, -0.104129374, 0, 0.9999987, 0, 0.104129344, 0, 0.9945635, -42.88745, -0.26329058, 60.950977)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog2" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=441761757]
+transform = Transform3D(0.99456346, 0, -0.104129374, 0, 0.9999987, 0, 0.104129344, 0, 0.9945635, -43.6943, -0.26329058, 62.108143)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog3" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=284708863]
+transform = Transform3D(0.99456346, 0, -0.104129374, 0, 0.9999987, 0, 0.104129344, 0, 0.9945635, -44.48316, -0.26329058, 63.246304)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog4" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=2087586880]
+transform = Transform3D(0.99456346, 0, -0.104129374, 0, 0.9999987, 0, 0.104129344, 0, 0.9945635, -44.95356, -0.26329058, 63.914253)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog5" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=139844451]
+transform = Transform3D(0.99456346, 0, -0.104129374, 0, 0.9999987, 0, 0.104129344, 0, 0.9945635, -45.554703, -0.26329058, 64.767975)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog6" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=403661238]
+transform = Transform3D(0.75419396, 0, 0.6566514, 0, 0.9999987, 0, -0.65665126, 0, 0.75419396, -46.08799, -0.26329058, 65.52348)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog7" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=2016791456]
+transform = Transform3D(0.99456346, 0, -0.104129374, 0, 0.9999987, 0, 0.104129344, 0, 0.9945635, -45.781063, -0.26329058, 65.1005)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="cormacs_fog8" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=2055805462]
+transform = Transform3D(0.99456346, 0, -0.104129374, 0, 0.9999987, 0, 0.104129344, 0, 0.9945636, -41.4137, -0.26329058, 58.902668)
+mesh = SubResource("QuadMesh_5ilro")
+surface_material_override/0 = SubResource("StandardMaterial3D_kc1gr")
+
+[node name="black" type="MeshInstance3D" parent="fakefog/notbaseballboyside" unique_id=74338503]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 2.9802322e-08, 0, 0.9999999, -42.04171, 0, 59.65536)
+mesh = SubResource("BoxMesh_kc1gr")
+surface_material_override/0 = SubResource("StandardMaterial3D_5oqe2")
+
+[node name="text" type="Node3D" parent="." unique_id=1257865397]
+
+[node name="textONE" type="Node3D" parent="text" unique_id=1175528317]
+transform = Transform3D(-0.997867, 0, -0.065281324, 0, 1, 0, 0.065281324, 0, -0.997867, 4.7907667, -18.260464, 1.1194296)
+
+[node name="txt" type="Label3D" parent="text/textONE" unique_id=2032135611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.319769, 0)
+text = "This is a piece by American grafitti artist Freedom,
+who is most well known for his work in the 
+Freedom Tunnel in New York City. Freedom has 
+multiple works in the Rochester Subway, and we 
+are happy to include such a talented artist in our 
+city's art gallery. 
+"
+
+[node name="bckg" type="MeshInstance3D" parent="text/textONE" unique_id=1106397269]
+transform = Transform3D(4.2, 0, 0, 0, 1.6, 0, 0, 0, 1, 0, 19.30909, -0.016864538)
+mesh = SubResource("QuadMesh_dwcxl")
+
+[node name="textTWO" type="Node3D" parent="text" unique_id=680350406]
+transform = Transform3D(-0.997867, 0, -0.065281324, 0, 1, 0, 0.065281324, 0, -0.997867, -46.07506, -18.394217, 5.48726)
+
+[node name="txt" type="Label3D" parent="text/textTWO" unique_id=1314438858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.319769, 0)
+text = "Where you stand now used to be the Second Genesee
+Aquaduct, constructed between 1836 and 1842. It was
+made to carry the Erie Canal over the Genesee River. 
+Eventually, the aquaduct was repurposed into a subway
+tunnel, while in present day it persists as an art gallery. "
+
+[node name="bckg" type="MeshInstance3D" parent="text/textTWO" unique_id=1106074247]
+transform = Transform3D(4.5, 0, 0, 0, 1.3, 0, 0, 0, 1, 0, 19.30909, -0.016864538)
+mesh = SubResource("QuadMesh_dwcxl")
+
+[node name="textTHREE" type="Node3D" parent="text" unique_id=1042448350]
+transform = Transform3D(-0.997867, 0, -0.065281324, 0, 1, 0, 0.065281324, 0, -0.997867, -21.882105, -18.394217, 3.138853)
+
+[node name="txt" type="Label3D" parent="text/textTHREE" unique_id=1394523226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.319769, 0)
+text = "This project is a step on the path of reproducing the
+Rochester Subway system and preserving it long
+past its destruction. Projects like this save the 
+valuable history and art contained within vulnerable
+ locations, such as the Rochester Abandoned
+Subway."
+
+[node name="bckg" type="MeshInstance3D" parent="text/textTHREE" unique_id=439132791]
+transform = Transform3D(4.3, 0, 0, 0, 1.4, 0, 0, 0, 1, 0, 19.30909, -0.016864538)
+mesh = SubResource("QuadMesh_dwcxl")
+
+[node name="textFOUR" type="Node3D" parent="text" unique_id=1308993613]
+transform = Transform3D(0.99781185, 0, 0.06611717, 0, 1, 0, -0.06611717, 0, 0.99781185, -40.525154, -18.394217, 6.3057547)
+
+[node name="txt" type="Label3D" parent="text/textFOUR" unique_id=1956230766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.319769, 0)
+text = "The sounds you hear in the Subway are genuine
+recordings from the Rochester Subway, recorded
+by other stewards of the project. The Genesee 
+River flows right under this aquaduct portion of
+the tunnels, and certain sections  even serve as
+waterways to flow into the river."
+
+[node name="bckg" type="MeshInstance3D" parent="text/textFOUR" unique_id=1043039464]
+transform = Transform3D(4.3, 0, 0, 0, 1.4, 0, 0, 0, 1, 0, 19.30909, -0.016864538)
+mesh = SubResource("QuadMesh_dwcxl")
+
+[node name="textFIVE" type="Node3D" parent="text" unique_id=1570736924]
+transform = Transform3D(0.99781185, 0, 0.06611717, 0, 1, 0, -0.06611717, 0, 0.99781185, -14.027832, -18.394217, 3.9178867)
+
+[node name="txt" type="Label3D" parent="text/textFIVE" unique_id=1673863045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.319769, 0)
+text = "The city of Rochester had an active subway system 
+from 1927 to 1956. Nowadays, the tunnels that used 
+to provide passage for millions of commuters are 
+being repurposed as a free and open art gallery for
+everyone, making art and history more accessible 
+than ever "
+
+[node name="bckg" type="MeshInstance3D" parent="text/textFIVE" unique_id=504531469]
+transform = Transform3D(4.3, 0, 0, 0, 1.4, 0, 0, 0, 1, 0, 19.30909, -0.016864538)
+mesh = SubResource("QuadMesh_dwcxl")
+
+[node name="textSIX" type="Node3D" parent="text" unique_id=1544202537]
+transform = Transform3D(0.9999269, 0, -0.012094836, 0, 1, 0, 0.012094836, 0, 0.9999269, 10.2057495, -18.394217, 1.978631)
+
+[node name="txt" type="Label3D" parent="text/textSIX" unique_id=1289031418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.319769, 0)
+text = "This project makes accessing the history and 
+art contained within the Rochester Subway
+easier and safer than ever before. This VR
+experience allows for the Subway to be
+accessed from anywhere on the planet
+that has a VR headset, a previously
+impossible standard."
+
+[node name="bckg" type="MeshInstance3D" parent="text/textSIX" unique_id=2026045144]
+transform = Transform3D(3.8, 0, 0, 0, 1.7, 0, 0, 0, 1, 0, 19.30909, -0.016864538)
+mesh = SubResource("QuadMesh_dwcxl")
