@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Rochester Abandoned Subway"
-run/main_scene="uid://jd7e0mt4tn1u"
+run/main_scene="uid://cfh81msb20qx4"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

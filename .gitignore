@@ -20,6 +20,9 @@ rochester-abandoned-subway/big_scene
 
 # Builds ignore
 rochester-abandoned-subway/apks
+<<<<<<< HEAD
+=======
 
 # Assets ignore
+>>>>>>> josh-branch-dev-2
 rochester-abandoned-subway/assets/SubwayModel*
